@@ -1,0 +1,64 @@
+# 🚀 DEPLOYMENT - COPY & PASTE COMMANDS ONLY
+
+## ONE FILE TO READ: DEPLOY.md
+
+Open `DEPLOY.md` and follow the 4 simple steps.
+
+All commands are ready to copy-paste!
+
+---
+
+## Quick Reference
+
+### Build
+```powershell
+npm run build
+```
+
+### Push to GitHub (First Time)
+```powershell
+git init
+git add .
+git commit -m "Deploy Reddington Group INC"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/reddingtongroupinc.git
+git push -u origin main
+```
+
+### Update Later
+```powershell
+git add .
+git commit -m "Update"
+git push origin main
+```
+
+### Deploy (After GitHub Setup)
+- Go to AWS Amplify
+- Connect GitHub repo
+- Done! Auto-deploys in 3-5 minutes
+
+---
+
+## Files in This Project
+
+✅ **App.js** - Redirects to your main website
+✅ **App.css** - Beautiful purple design
+✅ **package.json** - Dependencies
+✅ **DEPLOY.md** - Step-by-step deployment guide
+✅ **README.md** - Project info
+
+---
+
+## What Happens
+
+1. User visits: `reddingtongroupinc.com`
+2. React app loads
+3. Instantly redirects to: `https://www.reddingtonglobal.com`
+
+---
+
+## Next Steps
+
+1. Read `DEPLOY.md`
+2. Copy-paste the commands
+3. Your website is live! 🎉

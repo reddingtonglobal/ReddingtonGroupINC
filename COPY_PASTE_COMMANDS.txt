@@ -1,0 +1,106 @@
+# COPY-PASTE DEPLOYMENT COMMANDS
+
+## ✅ PROJECT IS READY TO DEPLOY
+
+Just copy and paste these commands in order.
+
+---
+
+## COMMAND 1: Build the App
+
+Open PowerShell in your project folder and run:
+
+```
+npm run build
+```
+
+---
+
+## COMMAND 2: Setup Git (First Time Only)
+
+```
+git init
+```
+
+```
+git add .
+```
+
+```
+git commit -m "Deploy Reddington Group INC"
+```
+
+```
+git branch -M main
+```
+
+**IMPORTANT: Replace YOUR_USERNAME below with your GitHub username**
+
+```
+git remote add origin https://github.com/YOUR_USERNAME/reddingtongroupinc.git
+```
+
+```
+git push -u origin main
+```
+
+---
+
+## COMMAND 3: Create GitHub Repo (First Time Only)
+
+1. Go to: https://github.com/new
+2. Name: `reddingtongroupinc`
+3. Make it **Public**
+4. Click "Create repository"
+
+Then run Command 2 above.
+
+---
+
+## COMMAND 4: Deploy to AWS (First Time Only)
+
+1. Go to: https://aws.amazon.com/amplify/
+2. Click "Get started" → "Host your web app"
+3. Select "GitHub"
+4. Authorize and select your repo
+5. Click "Save and deploy"
+
+**Wait 3-5 minutes...**
+
+---
+
+## COMMAND 5: Connect Your Domain (First Time Only)
+
+1. In Amplify, go to "Domain management"
+2. Click "Add domain"
+3. Enter: `reddingtongroupinc.com`
+4. Copy DNS records
+5. Go to your domain registrar
+6. Paste DNS records
+7. Wait 5-30 minutes
+
+---
+
+## COMMAND 6: Update Website (After Deployment)
+
+Every time you want to update:
+
+```
+git add .
+```
+
+```
+git commit -m "Update"
+```
+
+```
+git push origin main
+```
+
+Amplify auto-deploys in 1-2 minutes!
+
+---
+
+## THAT'S ALL! 🎉
+
+Your website is live and redirects to your main site!

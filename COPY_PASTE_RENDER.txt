@@ -1,0 +1,89 @@
+# 📋 COPY-PASTE COMMANDS FOR RENDER DEPLOYMENT
+
+## STEP 1: Push to GitHub
+
+### Replace YOUR_GITHUB_USERNAME with your actual username!
+
+```powershell
+git init
+git add .
+git commit -m "Deploy Reddington Group INC to Render"
+git branch -M main
+git remote add origin https://github.com/YOUR_GITHUB_USERNAME/ReddingtonGroupINC.git
+git push -u origin main
+```
+
+---
+
+## STEP 2: Deploy on Render
+
+1. Go to: https://dashboard.render.com
+2. Click "New +" → "Static Site"
+3. Connect GitHub and select repository
+4. Use these settings:
+
+**Build Command:**
+```
+npm run build
+```
+
+**Publish Directory:**
+```
+build
+```
+
+---
+
+## STEP 3: Update Your Website Later
+
+```powershell
+git add .
+git commit -m "Updated website"
+git push origin main
+```
+
+---
+
+## DNS Records for Your Domain
+
+### A Record:
+```
+Type: A
+Name: @
+Value: 216.24.57.1
+```
+
+### CNAME Record:
+```
+Type: CNAME
+Name: www
+Value: your-site-name.onrender.com
+```
+
+Replace `your-site-name` with the actual name Render gives you!
+
+---
+
+## Troubleshooting Commands
+
+### Check if git is initialized:
+```powershell
+git status
+```
+
+### Test build locally:
+```powershell
+npm run build
+```
+
+### Start local server:
+```powershell
+npm start
+```
+
+### Check DNS propagation:
+Visit: https://dnschecker.org
+
+---
+
+**That's it! Simple and easy!** 🚀

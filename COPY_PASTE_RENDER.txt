@@ -2,16 +2,15 @@
 
 ## STEP 1: Push to GitHub
 
-### Replace YOUR_GITHUB_USERNAME with your actual username!
+### You already have the repo! Just push the changes:
 
 ```powershell
-git init
 git add .
-git commit -m "Deploy Reddington Group INC to Render"
-git branch -M main
-git remote add origin https://github.com/YOUR_GITHUB_USERNAME/ReddingtonGroupINC.git
-git push -u origin main
+git commit -m "Fix Render deployment configuration"
+git push origin main
 ```
+
+If you get authentication error, authenticate with GitHub first.
 
 ---
 
@@ -19,18 +18,22 @@ git push -u origin main
 
 1. Go to: https://dashboard.render.com
 2. Click "New +" → "Static Site"
-3. Connect GitHub and select repository
+3. Connect GitHub and select repository: "reddingtonglobal/ReddingtonGroupINC"
 4. Use these settings:
+
+**IMPORTANT - Leave Root Directory EMPTY or use `.`**
 
 **Build Command:**
 ```
-npm run build
+npm install && npm run build
 ```
 
 **Publish Directory:**
 ```
 build
 ```
+
+⚠️ DO NOT set a custom root directory like "frontend" or "src"!
 
 ---
 
